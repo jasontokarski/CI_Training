@@ -2,6 +2,7 @@ package ci.training;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertNull;
 import static org.mockito.Mockito.when;
 
 import java.math.BigDecimal;
@@ -123,5 +124,10 @@ public class WalletServiceTest {
 		when(repo.find("9876544")).thenReturn(null);
 		
 		assertTrue(service.deposit("9876544", new BigDecimal(9999))==null);
+	}
+	
+	@Test
+	public void test_customer_not_found() {
+		assertNull(repo.find("494955"));
 	}
 }

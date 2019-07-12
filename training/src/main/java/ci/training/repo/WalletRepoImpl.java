@@ -14,11 +14,11 @@ public class WalletRepoImpl implements WalletRepo {
 	}
 	
 	public Customer find(String phoneNumber) {
-//		for(Customer c : customerDatabase) {
-//			if(c.getPhoneNumber().equalsIgnoreCase(phoneNumber)) {
-//				return c;
-//			}
-//		}
+		for(Customer c : customerDatabase) {
+			if(c.getPhoneNumber().equalsIgnoreCase(phoneNumber)) {
+				return c;
+			}
+		}
 		return null;
 	}
 }
