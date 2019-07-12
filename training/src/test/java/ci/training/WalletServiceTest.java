@@ -33,6 +33,7 @@ public class WalletServiceTest {
 	public void test_createWallet_success() {
 		Customer customer = new Customer("AAA", "9850276767", new Wallet(new BigDecimal(400)));
 		when(repo.save(customer)).thenReturn(true);
+		//testing
 		assertEquals(customer, service.createWallet("AAA", "9850276767", new BigDecimal(400)));
 	}
 	
