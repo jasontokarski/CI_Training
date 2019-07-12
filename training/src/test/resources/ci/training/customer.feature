@@ -23,4 +23,12 @@ Feature: Wallet Application
 		When I enter name "Jason", phone number "8883024438", balance "50.00"
 		Then A new customer account with name "Jason", phone number "8883024438", balance "50.00" should be created
 		
-	Scenario: Creating a new customer account
+	Scenario: Display a customer's balance
+		Given I have an account with name "Jason", phone number "8883024438", balance "50.00"
+		When I search the phone number "8883024438"
+		Then The balance displayed should be "50.00"
+		
+	Scenario: Withdraw money from a customer account
+		Given I have an account with name "George", phone number "8883024438", balance "50.00"
+		When I withdraw "25.00" from an account with phone number "8883024438"
+		Then The current balance should equal "25.00"

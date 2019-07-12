@@ -64,7 +64,6 @@ public class WalletServiceTest {
 	public void test_showBalance_returnsNullForInvalidAccount(){
 		
 		when(repo.find("9876544")).thenReturn(null);
-		
 		assertTrue(service.showBalance("9876544")==null);
 	}
 	
@@ -128,6 +127,6 @@ public class WalletServiceTest {
 	
 	@Test
 	public void test_customer_not_found() {
-		assertNull(repo.find("494955"));
+		assertEquals(repo.find("494955"), null);
 	}
 }
