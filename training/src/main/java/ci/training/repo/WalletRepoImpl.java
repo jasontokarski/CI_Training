@@ -1,7 +1,5 @@
 package ci.training.repo;
 
-import static org.hamcrest.CoreMatchers.nullValue;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,11 +14,11 @@ public class WalletRepoImpl implements WalletRepo {
 	}
 	
 	public Customer find(String phoneNumber) {
-//		for(Customer c : customerDatabase) {
-//			if(c.getPhoneNumber().equalsIgnoreCase(phoneNumber)) {
-//				return c;
-//			}
-//		}
+		for(Customer c : customerDatabase) {
+			if(c.getPhoneNumber().equalsIgnoreCase(phoneNumber)) {
+				return c;
+			}
+		}
 		return null;
 	}
 }

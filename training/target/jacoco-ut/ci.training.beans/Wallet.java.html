@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Wallet.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">training</a> &gt; <a href="index.source.html" class="el_package">ci.training.beans</a> &gt; <span class="el_source">Wallet.java</span></div><h1>Wallet.java</h1><pre class="source lang-java linenums">package ci.training.beans;
+
+import java.math.BigDecimal;
+
+public class Wallet {
+
+	private BigDecimal balance;
+
+	public Wallet() {
+<span class="nc" id="L10">		super();</span>
+		// TODO Auto-generated constructor stub
+<span class="nc" id="L12">	}</span>
+
+	public Wallet(BigDecimal balance) {
+<span class="fc" id="L15">		super();</span>
+<span class="fc" id="L16">		this.balance = balance;</span>
+<span class="fc" id="L17">	}</span>
+
+	public BigDecimal getBalance() {
+<span class="fc" id="L20">		return balance;</span>
+	}
+
+	public void setBalance(BigDecimal balance) {
+<span class="fc" id="L24">		this.balance = balance;</span>
+<span class="fc" id="L25">	}</span>
+
+	@Override
+	public int hashCode() {
+<span class="nc" id="L29">		final int prime = 31;</span>
+<span class="nc" id="L30">		int result = 1;</span>
+<span class="nc bnc" id="L31" title="All 2 branches missed.">		result = prime * result + ((balance == null) ? 0 : balance.hashCode());</span>
+<span class="nc" id="L32">		return result;</span>
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+<span class="pc bpc" id="L37" title="1 of 2 branches missed.">		if (this == obj)</span>
+<span class="nc" id="L38">			return true;</span>
+<span class="pc bpc" id="L39" title="1 of 2 branches missed.">		if (obj == null)</span>
+<span class="nc" id="L40">			return false;</span>
+<span class="pc bpc" id="L41" title="1 of 2 branches missed.">		if (getClass() != obj.getClass())</span>
+<span class="nc" id="L42">			return false;</span>
+<span class="fc" id="L43">		Wallet other = (Wallet) obj;</span>
+<span class="pc bpc" id="L44" title="1 of 2 branches missed.">		if (balance == null) {</span>
+<span class="nc bnc" id="L45" title="All 2 branches missed.">			if (other.balance != null)</span>
+<span class="nc" id="L46">				return false;</span>
+<span class="pc bpc" id="L47" title="1 of 2 branches missed.">		} else if (!balance.equals(other.balance))</span>
+<span class="nc" id="L48">			return false;</span>
+<span class="fc" id="L49">		return true;</span>
+	}
+
+	@Override
+	public String toString() {
+<span class="nc" id="L54">		return &quot;Wallet [balance=&quot; + balance + &quot;]&quot;;</span>
+	}
+	
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

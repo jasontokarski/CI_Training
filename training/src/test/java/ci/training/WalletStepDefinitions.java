@@ -16,24 +16,17 @@ import cucumber.api.java.en.When;
 public class WalletStepDefinitions {
 	
 	private Customer customer;
-	private Wallet wallet;
 	private WalletService ws;
 	
 	@Given("^I want to create a new account$")
 	public void i_want_to_create_a_new_account() throws Throwable {
 		ws = new WalletServiceImpl(new WalletRepoImpl());
 		customer = new Customer();
-		wallet = new Wallet();
 	}
 
 	@When("^I enter name \"(.*?)\", phone number \"(.*?)\", balance \"(.*?)\"$")
 	public void i_enter_name_phone_number_balance(String name, String number, String amount) throws Throwable {
-		customer.setName(name);
-		customer.setPhoneNumber(number);
-		wallet.setBalance(new BigDecimal(amount));
-		customer.setWallet(wallet);
-		
-		ws.createWallet(customer.getName(), customer.getPhoneNumber(), customer.getWallet().getBalance());
+		customer = ws.createWallet(name, number, new BigDecimal(amount));
 	}
 
 	@Then("^A new customer account with name \"(.*?)\", phone number \"(.*?)\", balance \"(.*?)\" should be created$")

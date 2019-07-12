@@ -1,0 +1,7 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+training,ci.training.exceptions,InsufficientBalanceException,4,3,0,0,2,2,1,1,1,1
+training,ci.training,App,7,0,0,0,3,0,2,0,2,0
+training,ci.training.beans,Wallet,46,37,9,5,13,13,10,4,3,4
+training,ci.training.beans,Customer,109,62,20,10,26,20,21,5,7,4
+training,ci.training.service,WalletServiceImpl,4,101,3,15,2,25,4,11,1,5
+training,ci.training.repo,WalletRepoImpl,21,13,4,0,4,3,3,2,1,2

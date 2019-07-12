@@ -22,3 +22,5 @@ Feature: Wallet Application
 		Given I want to create a new account
 		When I enter name "Jason", phone number "8883024438", balance "50.00"
 		Then A new customer account with name "Jason", phone number "8883024438", balance "50.00" should be created
+		
+	Scenario: Creating a new customer account
